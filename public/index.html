@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div class="center">
+  <h2>Select your mode</h2>
+  <button onclick="updateClicked()" id="updateBtn" class="mode inactive">Update</button>
+  <button onclick="deleteClicked()" id="deleteBtn" class="mode inactive">Delete</button>
+  <hr></hr>
+</div>
+
+
+<div class="grid">
+  <div class="col1">
+    <div class="dropdown-content">
+      <button onclick="firstClicked()" id="firstBtn" class="inactive">First name</button>
+      <button onclick="lastClicked()" id="lastBtn" class="inactive">Last name</button>
+      <button onclick="emailClicked()" id="emailBtn" class="inactive">Email</button>
+      <button onclick="phoneClicked()" id="phoneBtn" class="inactive">Phone</button>
+      
+    </div>
+  </div>
+  <div class="col2">
+    <!-- This is where user will type their search query -->
+    <label id="instructions">Label</label>
+    <input id="inputField">
+    <button id="done" onclick="doneClicked()">Done</button>
+  </div>
+</div>
+
+
+<div class="updateBlock">
+  <hr></hr>
+  <p>Enter new values below. Leave a field blank to not modify that field. Keep in mind that all changes are permanent.</p>
+  <div class="formGrid">
+    <div id="row1Col1">
+      <input placeholder="First name" class="updateInput" id="firstUpdate">
+    </div>
+    <div id="row1Col2">
+      <input placeholder="Last name" class="updateInput" id="lastUpdate">
+    </div>
+    <div id="row2Col1">
+      <input placeholder="Email" class="updateInput" id="emailUpdate">
+    </div>
+    <div id="row2Col2">
+      <input placeholder="Phone" class="updateInput" id="phoneUpdate">
+    </div>
+  </div>
+  <button onclick="updateDocument()" class="danger">Continue</button>
+</div>
+
+
+<div class="deleteBlock">
+   <hr></hr>
+  <h2>Are you sure?</h2>
+  <p>Deleting documents from the database is permanent.</p>
+  <button onclick="deleteDocument()" class="danger">Continue</button>
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
